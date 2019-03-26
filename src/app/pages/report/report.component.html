@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card class="inline-form-card">
+        <nb-card-header>{{descriptionReport}}</nb-card-header>
+        <nb-card-body>
+          <form [formGroup]="itemForm" class="form-inline" (ngSubmit)="searchItems()">
+            <input nbInput class="form-control full-width"
+                 placeholder="Fecha desde"
+                 [nbDatepicker]="formpicker">
+            <nb-datepicker #formpicker></nb-datepicker>
+            <div class="input-group full-width">
+              <input nbInput class="form-control full-width"
+                  placeholder="Fecha hasta"
+                  [nbDatepicker]="formpicker1">
+              <nb-datepicker #formpicker1></nb-datepicker>
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+  <div *ngIf="searchIsDone">
+    <div class="row">
+      <div class="col-md-12" *ngIf="hasItems else searchIsEmpty">
+        <nb-card class="list-card" size="medium">
+          <nb-card-header>{{headerTable}}</nb-card-header>
+          <nb-list>
+            <nb-list-item *ngFor="let user of items">
+              <nb-user [name]="user.name" [title]="user.title">
+              </nb-user>
+            </nb-list-item>
+          </nb-list>
+        </nb-card>
+      </div>  
+    </div>
+    <ng-template #searchIsEmpty>
+      <div class = "row">
+        <div class="col-md-12">
+            <h3>Sin datos para mostrar</h3>
+        </div>
+      </div>
+    </ng-template>
+  </div>

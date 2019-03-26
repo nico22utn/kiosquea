@@ -37,7 +37,7 @@
         border-color: nb-theme(color-success);
       }
 
-      @include nb-for-theme(cosmic) {
+      @include nb-for-theme(corporate) {
         box-shadow: 0 4px 14px 0 rgba(19, 19, 94, 0.4);
         background-color: #3e367e;
         border: 2px solid #3e367e;
@@ -81,7 +81,7 @@
         }
       }
 
-      @include nb-for-theme(cosmic) {
+      @include nb-for-theme(corporate) {
         .switch .slider {
           background-color: nb-theme(color-bg);
         }

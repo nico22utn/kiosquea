@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import { ProductModule } from './product/product.module';
+import { DebtsModule } from './debts/debts.module';
+import { ReportModule } from './report/report.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -15,9 +16,10 @@ const PAGES_COMPONENTS = [
   imports: [
     PagesRoutingModule,
     ThemeModule,
-    DashboardModule,
-    ECommerceModule,
     MiscellaneousModule,
+    ProductModule,
+    DebtsModule,
+    ReportModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,
