@@ -19,7 +19,7 @@ const PAGES_COMPONENTS = [
     MiscellaneousModule,
     ProductModule,
     DebtsModule,
-    ReportModule
+    ReportModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,

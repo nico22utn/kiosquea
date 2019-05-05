@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-12">
+    <nb-card>
+      <nb-card-header>Consulta rápida</nb-card-header>
+      <div class="form-group">
+        <div class="col-6">
+          <input type="text" placeholder="Search your product" class="form-control" (keypress)="searchProduct($event)"/>
+        </div>
+      </div>
+    </nb-card>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="col-12">
+      <div class="card-columns">
+        <ngx-card-product [product]="product" *ngFor="let product of products"></ngx-card-product>
+      </div>
+    </div> 
+  </div> 
+</div>

@@ -1,28 +1,59 @@
 import { Component, OnInit } from '@angular/core';
-import { SmartTableData } from '../../../@core/data/smart-table';
-import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
   selector: 'ngx-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
 
-  fruits = fruits;
+  settings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      id: {
+        title: 'ID',
+        type: 'number',
+      },
+      firstName: {
+        title: 'First Name',
+        type: 'string',
+      },
+      lastName: {
+        title: 'Last Name',
+        type: 'string',
+      },
+      username: {
+        title: 'Username',
+        type: 'string',
+      },
+      email: {
+        title: 'E-mail',
+        type: 'string',
+      },
+      age: {
+        title: 'Age',
+        type: 'number',
+      },
+    },
+  };
 
-  users: { name: string, title: string }[] = [
-    { name: 'Carla Espinosa', title: 'Nurse' },
-    { name: 'Bob Kelso', title: 'Doctor of Medicine' },
-    { name: 'Janitor', title: 'Janitor' },
-    { name: 'Perry Cox', title: 'Doctor of Medicine' },
-    { name: 'Ben Sullivan', title: 'Carpenter and photographer' },
-  ];
-  
-  constructor(private service: SmartTableData) { }
+  constructor() { }
 
   ngOnInit() {
-    const data = this.service.getData();
+
   }
 
   onDeleteConfirm(event): void {
@@ -34,16 +65,3 @@ export class ProductListComponent implements OnInit {
   }
 }
 
-export const fruits: string[] = [
-  'Lemons',
-  'Raspberries',
-  'Strawberries',
-  'Blackberries',
-  'Kiwis',
-  'Grapefruit',
-  'Avocado',
-  'Watermelon',
-  'Cantaloupe',
-  'Oranges',
-  'Peaches',
-];

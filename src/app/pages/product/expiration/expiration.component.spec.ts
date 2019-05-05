@@ -8,7 +8,7 @@ describe('ExpirationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExpirationComponent ]
+      declarations: [ ExpirationComponent ],
     })
     .compileComponents();
   }));

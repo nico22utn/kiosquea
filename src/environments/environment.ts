@@ -10,4 +10,8 @@
 
 export const environment = {
   production: false,
+  BASE_END_POINT: '/kiosquea',
+  ROOT_PAGE: '/pages',
+  PRODUCT: '/products',
+
 };

@@ -24,3 +24,4 @@
   // loading progress bar
   @include ngx-pace-theme();
 };
+.nb-theme-corporate nb-layout .layout nb-layout-header.fixed ~ .layout-container { padding-top: 1.5rem; }

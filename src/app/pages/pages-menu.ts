@@ -7,12 +7,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/home',
     children: [
       {
-        title: 'Consultar producto',
-        link: '/pages/home/products',
-      },
-      {
-        title: 'Actualizar producto',
-        link: '/pages/products/add',
+        title: 'Consulta rápida',
+        link: '/pages/products/fast-query',
       },
       {
         title: 'Ver todos los productos',

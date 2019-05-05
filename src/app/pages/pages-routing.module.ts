@@ -13,18 +13,12 @@ const routes: Routes = [{
   }, {
     path: 'debts',
     loadChildren: './debts/debts.module#DebtsModule',
-  },{
-    path: 'forms',
-    loadChildren: './forms/forms.module#FormsModule',
-  }, {
-    path: 'tables',
-    loadChildren: './tables/tables.module#TablesModule',
   }, {
     path: 'miscellaneous',
     loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
   }, {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'products',
     pathMatch: 'full',
   }, {
     path: '**',
